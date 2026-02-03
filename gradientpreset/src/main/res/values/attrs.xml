@@ -7,5 +7,16 @@
             <enum name="purple_dream" value="2"/>
         </attr>
         <attr name="gradientRadius" format="dimension"/>
+        <attr name="gradientOrientation" format="enum">
+            <enum name="left_right" value="0"/>
+            <enum name="top_bottom" value="1"/>
+            <enum name="tl_br" value="2"/>
+            <enum name="bl_tr" value="3"/>
+        </attr>
+        <attr name="startColor" format="color"/>
+        <attr name="endColor" format="color"/>
+
+        <attr name="startColorAttr" format="reference"/>
+        <attr name="endColorAttr" format="reference"/>
     </declare-styleable>
 </resources>

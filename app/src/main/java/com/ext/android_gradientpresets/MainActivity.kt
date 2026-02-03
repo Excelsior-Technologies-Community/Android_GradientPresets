@@ -1,12 +1,14 @@
 package com.ext.android_gradientpresets
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.ext.android_gradientpresets.databinding.ActivityMainBinding
 import com.ext.gradientpreset.GradientPreset
+import com.ext.gradientpreset.applyGradientFromXml
 import com.ext.gradientpreset.setGradient
 
 class MainActivity : AppCompatActivity() {
@@ -21,9 +23,5 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding.rootLayout.setGradient(
-            preset = GradientPreset.SUNSET,
-            cornerRadius = 32f
-        )
     }
 }

@@ -3,26 +3,20 @@ package com.ext.gradientpreset
 import android.graphics.Color
 
 enum class GradientPreset(
-    val colors: IntArray
+    val colors: List<GradientColor>
 ) {
+
     SUNSET(
-        intArrayOf(
-            Color.parseColor("#ff7e5f"),
-            Color.parseColor("#feb47b")
+        listOf(
+            GradientColor.ThemeAttr(android.R.attr.colorPrimary),
+            GradientColor.ThemeAttr(android.R.attr.colorSecondary)
         )
     ),
 
     OCEAN_BLUE(
-        intArrayOf(
-            Color.parseColor("#2193b0"),
-            Color.parseColor("#6dd5ed")
-        )
-    ),
-
-    PURPLE_DREAM(
-        intArrayOf(
-            Color.parseColor("#cc2b5e"),
-            Color.parseColor("#753a88")
+        listOf(
+            GradientColor.Static(0xFF2193B0.toInt()),
+            GradientColor.Static(0xFF6DD5ED.toInt())
         )
     )
 }
