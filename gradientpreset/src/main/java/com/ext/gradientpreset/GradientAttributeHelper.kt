@@ -42,15 +42,17 @@ internal object GradientAttributeHelper {
                 0
             )
 
-            val startColorRes = typedArray.getResourceId(
-                R.styleable.GradientView_startColor,
-                0
-            )
+            val hasStartColor = typedArray.hasValue(R.styleable.GradientView_startColor)
+            val hasEndColor = typedArray.hasValue(R.styleable.GradientView_endColor)
 
-            val endColorRes = typedArray.getResourceId(
-                R.styleable.GradientView_endColor,
-                0
-            )
+            val startColor = if (hasStartColor)
+                typedArray.getColor(R.styleable.GradientView_startColor, 0)
+            else 0
+
+            val endColor = if (hasEndColor)
+                typedArray.getColor(R.styleable.GradientView_endColor, 0)
+            else 0
+
 
             val colors: IntArray? = when {
                 startColorAttr != 0 && endColorAttr != 0 -> {
@@ -60,11 +62,8 @@ internal object GradientAttributeHelper {
                     )
                 }
 
-                startColorRes != 0 && endColorRes != 0 -> {
-                    intArrayOf(
-                        ColorResolver.resolveColorRes(context, startColorRes),
-                        ColorResolver.resolveColorRes(context, endColorRes)
-                    )
+                hasStartColor && hasEndColor -> {
+                    intArrayOf(startColor, endColor)
                 }
 
                 else -> null

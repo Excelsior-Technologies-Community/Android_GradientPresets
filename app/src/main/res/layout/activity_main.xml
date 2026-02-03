@@ -12,12 +12,19 @@
     <com.ext.gradientpreset.GradientLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:gradientPreset="sunset"
+        app:startColor="#141E30"
+        app:endColor="#243B55"
         app:gradientOrientation="top_bottom"
-        app:gradientRadius="24dp" />
+        app:gradientRadius="0dp">
 
-
-
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dark Mode Ready"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"/>
+    </com.ext.gradientpreset.GradientLayout>
 
 </LinearLayout>
