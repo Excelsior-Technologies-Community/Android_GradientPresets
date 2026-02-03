@@ -3,8 +3,14 @@
     <declare-styleable name="GradientView">
         <attr name="gradientPreset" format="enum">
             <enum name="sunset" value="0"/>
-            <enum name="ocean_blue" value="1"/>
-            <enum name="purple_dream" value="2"/>
+            <enum name="fire" value="1"/>
+            <enum name="ocean" value="2"/>
+            <enum name="sky" value="3"/>
+            <enum name="forest" value="4"/>
+            <enum name="mint" value="5"/>
+            <enum name="lavender" value="6"/>
+            <enum name="night" value="7"/>
+            <enum name="peach" value="8"/>
         </attr>
         <attr name="gradientRadius" format="dimension"/>
         <attr name="gradientOrientation" format="enum">
